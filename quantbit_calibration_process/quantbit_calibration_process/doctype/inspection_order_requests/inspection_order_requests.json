@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-02-26 12:29:56.217278",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "column_break_ahegz",
+  "naming_series",
+  "column_break_w0rvo",
+  "date",
+  "section_break_xajuf",
+  "equipment_id",
+  "column_break_k0ujx",
+  "equipment_name",
+  "section_break_a6soc",
+  "from_date",
+  "column_break_iz5xg",
+  "to_date",
+  "section_break_mv8xm",
+  "order_request_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ahegz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "IOR-",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_w0rvo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xajuf",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Equipment Details"
+  },
+  {
+   "fieldname": "column_break_iz5xg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_mv8xm",
+   "fieldtype": "Section Break",
+   "label": "Order Request Details"
+  },
+  {
+   "fieldname": "order_request_details",
+   "fieldtype": "Table",
+   "options": "Order Request Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Inspection Order Requests",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "Order From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "Order To Date"
+  },
+  {
+   "fieldname": "equipment_id",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Equipment ID",
+   "options": "Equipment Master"
+  },
+  {
+   "fieldname": "column_break_k0ujx",
+   "fieldtype": "Column Break",
+   "hidden": 1
+  },
+  {
+   "fetch_from": "equipment_id.equipment_name",
+   "fieldname": "equipment_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Equipment Name"
+  },
+  {
+   "fieldname": "section_break_a6soc",
+   "fieldtype": "Section Break",
+   "label": "Select Order Dates"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Equipment Inspection",
+   "link_fieldname": "inspection_order_requests"
+  }
+ ],
+ "modified": "2024-02-29 15:28:22.224135",
+ "modified_by": "Administrator",
+ "module": "Quantbit Calibration Process",
+ "name": "Inspection Order Requests",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

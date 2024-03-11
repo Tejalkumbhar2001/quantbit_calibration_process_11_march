@@ -1,0 +1,234 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-02-26 13:38:23.380434",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "column_break_yidjh",
+  "naming_series",
+  "column_break_dqoi5",
+  "date",
+  "section_break_rbo5h",
+  "equipment_id",
+  "equipment_name",
+  "column_break_j3aiy",
+  "valid_from",
+  "valid_to",
+  "section_break_hafdm",
+  "maintanance_order",
+  "column_break_n1gyx",
+  "maintanace_scheduled_date_date",
+  "column_break_4tfbo",
+  "maintanance_order_type",
+  "section_break_4uwh7",
+  "pending_request_orders",
+  "section_break_6zryt",
+  "equipment_inspection_details",
+  "section_break_pms2c",
+  "column_break_ptruj",
+  "completion_status",
+  "equipment_status",
+  "column_break_nxqkk",
+  "customer_feedback",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_yidjh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "EQI-",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_dqoi5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_rbo5h",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "equipment_id",
+   "fieldtype": "Link",
+   "label": "Equipment ID",
+   "options": "Equipment Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_j3aiy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "equipment_id.equipment_name",
+   "fieldname": "equipment_name",
+   "fieldtype": "Data",
+   "label": "Equipment Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_6zryt",
+   "fieldtype": "Section Break",
+   "label": "Equipment Inspection Details"
+  },
+  {
+   "fieldname": "equipment_status",
+   "fieldtype": "Select",
+   "label": "Equipment Status",
+   "options": "\nContinue For Use\nRejected",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Equipment Inspection",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "equipment_inspection_details",
+   "fieldtype": "Table",
+   "label": "Task List Description",
+   "options": "Equipment Inspection Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_pms2c",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ptruj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_4uwh7",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Pending Request Orders"
+  },
+  {
+   "fieldname": "pending_request_orders",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "options": "Pending Request Orders"
+  },
+  {
+   "fieldname": "section_break_hafdm",
+   "fieldtype": "Section Break",
+   "label": "Pending Maintanance Order"
+  },
+  {
+   "fieldname": "maintanance_order",
+   "fieldtype": "Link",
+   "label": "Maintanance Order",
+   "options": "Equipment Maintanance Order",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_n1gyx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "maintanance_order.maintanance_date",
+   "fieldname": "maintanace_scheduled_date_date",
+   "fieldtype": "Date",
+   "label": "Maintanace Scheduled Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "equipment_id.valid_from",
+   "fieldname": "valid_from",
+   "fieldtype": "Data",
+   "label": "Valid From",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "equipment_id.valid_to",
+   "fieldname": "valid_to",
+   "fieldtype": "Data",
+   "label": "Valid To",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer_feedback",
+   "fieldtype": "Small Text",
+   "label": "Customer Feedback"
+  },
+  {
+   "fieldname": "column_break_nxqkk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_4tfbo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "maintanance_order.maintanance_order_type",
+   "fieldname": "maintanance_order_type",
+   "fieldtype": "Data",
+   "label": "Maintanance Order Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "completion_status",
+   "fieldtype": "Select",
+   "label": "Inspection Completion Status",
+   "options": "\nPartially Completed\nFully Completed",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-02-29 15:46:20.525486",
+ "modified_by": "Administrator",
+ "module": "Quantbit Calibration Process",
+ "name": "Equipment Inspection",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

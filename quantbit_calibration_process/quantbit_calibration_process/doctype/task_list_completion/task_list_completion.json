@@ -1,0 +1,281 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-03-08 21:25:19.985387",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "column_break_xttvl",
+  "naming_series",
+  "column_break_dw7nz",
+  "date",
+  "section_break_crcly",
+  "order_by_department",
+  "column_break_3hk2o",
+  "order_type",
+  "column_break_aqkwn",
+  "maintanance_order_type",
+  "column_break_hflyt",
+  "maintanance_scheduled_date",
+  "section_break_j8g2s",
+  "equipment_category",
+  "equipment_id",
+  "column_break_3p2tt",
+  "equipment_brand",
+  "equipment_name",
+  "column_break_4idvu",
+  "plant",
+  "location",
+  "section_break_e6qli",
+  "assign_to",
+  "column_break_wcbvj",
+  "assign_to_name",
+  "section_break_vbz0u",
+  "task_completion_details",
+  "section_break_xyqmg",
+  "completion_status",
+  "column_break_wqfhx",
+  "equipment_status",
+  "column_break_vwwes",
+  "task_completion_date",
+  "work_done_description_section",
+  "work_done",
+  "references_section",
+  "maintenance_order",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_xttvl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "TASK-"
+  },
+  {
+   "fieldname": "column_break_dw7nz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_crcly",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "equipment_category",
+   "fieldtype": "Data",
+   "label": "Equipment Category"
+  },
+  {
+   "fieldname": "equipment_id",
+   "fieldtype": "Data",
+   "label": "Equipment ID"
+  },
+  {
+   "fieldname": "column_break_3p2tt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "equipment_brand",
+   "fieldtype": "Data",
+   "label": "Equipment Brand"
+  },
+  {
+   "fieldname": "equipment_name",
+   "fieldtype": "Data",
+   "label": "Equipment Name"
+  },
+  {
+   "fieldname": "column_break_4idvu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "plant",
+   "fieldtype": "Data",
+   "label": "Plant"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "section_break_vbz0u",
+   "fieldtype": "Section Break",
+   "label": "Task Completion Details"
+  },
+  {
+   "fieldname": "order_type",
+   "fieldtype": "Select",
+   "label": "Order Type",
+   "options": "\nMaintanance\nCalibration"
+  },
+  {
+   "fieldname": "section_break_j8g2s",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_aqkwn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maintanance_order_type",
+   "fieldtype": "Select",
+   "label": "Maintenance Order Type",
+   "options": "\nRegular\nBreakdown\nPreventive"
+  },
+  {
+   "fieldname": "task_completion_details",
+   "fieldtype": "Table",
+   "label": "Task Completion Details",
+   "options": "Task Completion Details"
+  },
+  {
+   "fieldname": "section_break_e6qli",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "assign_to",
+   "fieldtype": "Link",
+   "label": "Assign To",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_wcbvj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "assign_to.full_name",
+   "fieldname": "assign_to_name",
+   "fieldtype": "Data",
+   "label": "Assign to Name"
+  },
+  {
+   "fieldname": "references_section",
+   "fieldtype": "Section Break",
+   "label": "References"
+  },
+  {
+   "fieldname": "section_break_xyqmg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.completion_status==\"Fully Completed\"",
+   "fieldname": "equipment_status",
+   "fieldtype": "Select",
+   "label": "Equipment Status",
+   "options": "\nIn Use\nContinue For Use\nRejected"
+  },
+  {
+   "fieldname": "column_break_wqfhx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "completion_status",
+   "fieldtype": "Select",
+   "label": "Completion Status",
+   "options": "\nPartially Completed\nFully Completed"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Task List Completion",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "order_by_department",
+   "fieldtype": "Data",
+   "label": "Order by Department"
+  },
+  {
+   "fieldname": "maintanance_scheduled_date",
+   "fieldtype": "Date",
+   "label": "Maintenance Scheduled Date"
+  },
+  {
+   "fieldname": "column_break_hflyt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_3hk2o",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maintenance_order",
+   "fieldtype": "Link",
+   "label": "Equipment Maintenance Order",
+   "options": "Equipment Maintenance Order"
+  },
+  {
+   "fieldname": "work_done_description_section",
+   "fieldtype": "Section Break",
+   "label": "Work Done Description"
+  },
+  {
+   "fieldname": "work_done",
+   "fieldtype": "Text Editor",
+   "label": "Work Done"
+  },
+  {
+   "fieldname": "column_break_vwwes",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.completion_status==\"Fully Completed\"",
+   "fieldname": "task_completion_date",
+   "fieldtype": "Date",
+   "label": "Task Completion Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-10 23:43:22.399749",
+ "modified_by": "Administrator",
+ "module": "Quantbit Calibration Process",
+ "name": "Task List Completion",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

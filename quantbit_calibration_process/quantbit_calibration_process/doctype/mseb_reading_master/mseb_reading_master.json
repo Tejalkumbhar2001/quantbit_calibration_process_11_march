@@ -1,0 +1,270 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-03-01 13:13:18.501630",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "naming_series",
+  "column_break_g4cca",
+  "plant",
+  "column_break_rgqwl",
+  "shift_type",
+  "column_break_6lszr",
+  "date",
+  "section_break_btcy2",
+  "kwh",
+  "md_kva",
+  "amount",
+  "good_metalkg",
+  "column_break_jw088",
+  "kwh_units",
+  "kvarh_lag",
+  "furnace_kwh",
+  "fce_unitsmt",
+  "column_break_iazd5",
+  "kvah",
+  "kvarh_lag_units",
+  "furnace_units",
+  "aux_unitsmt",
+  "column_break_oo0qp",
+  "kvah_units",
+  "kvarh_lead",
+  "auxunits",
+  "total_heats",
+  "column_break_2vblc",
+  "power_factor",
+  "kvarh_lead_units",
+  "liquid_metal_kg",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_g4cca",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "plant",
+   "fieldtype": "Data",
+   "label": "Plant"
+  },
+  {
+   "fieldname": "column_break_rgqwl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shift_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shift Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_6lszr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_btcy2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "kwh",
+   "fieldtype": "Float",
+   "label": "Kwh",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jw088",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kwh_units",
+   "fieldtype": "Float",
+   "label": "Kwh Units",
+   "precision": "2"
+  },
+  {
+   "fieldname": "kvah",
+   "fieldtype": "Float",
+   "label": "Kvah",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "kvah_units",
+   "fieldtype": "Float",
+   "label": " Kvah Units",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_oo0qp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "power_factor",
+   "fieldtype": "Float",
+   "label": "Power Factor",
+   "precision": "3"
+  },
+  {
+   "fieldname": "md_kva",
+   "fieldtype": "Float",
+   "label": "MD (Kva)",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "kvarh_lag_units",
+   "fieldtype": "Float",
+   "label": "Kvarh (Lag) Units",
+   "precision": "2"
+  },
+  {
+   "fieldname": "kvarh_lead",
+   "fieldtype": "Float",
+   "label": "Kvarh (Lead)",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "kvarh_lead_units",
+   "fieldtype": "Float",
+   "label": "Kvarh (Lead) Units",
+   "precision": "2"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Float",
+   "label": "Amount",
+   "precision": "2"
+  },
+  {
+   "fieldname": "furnace_kwh",
+   "fieldtype": "Float",
+   "label": "Furnace Kwh",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "furnace_units",
+   "fieldtype": "Float",
+   "label": "Furnace Units",
+   "precision": "2"
+  },
+  {
+   "fieldname": "auxunits",
+   "fieldtype": "Float",
+   "label": "Aux.Units",
+   "precision": "2"
+  },
+  {
+   "fieldname": "liquid_metal_kg",
+   "fieldtype": "Float",
+   "label": "Liquid metal( Kg)",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "good_metalkg",
+   "fieldtype": "Float",
+   "label": "Good Metal(Kg)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "fce_unitsmt",
+   "fieldtype": "Float",
+   "label": "Fce. Units/Mt",
+   "precision": "2"
+  },
+  {
+   "fieldname": "aux_unitsmt",
+   "fieldtype": "Float",
+   "label": "Aux. Units/Mt",
+   "precision": "2"
+  },
+  {
+   "fieldname": "total_heats",
+   "fieldtype": "Float",
+   "label": "Total Heats",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_iazd5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_2vblc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "MSEB.DD.MM.YY.-",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "MSEB Reading Master",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "kvarh_lag",
+   "fieldtype": "Float",
+   "label": "Kvarh (Lag)",
+   "precision": "2",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-03-07 10:21:37.034515",
+ "modified_by": "Administrator",
+ "module": "Quantbit Calibration Process",
+ "name": "MSEB Reading Master",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

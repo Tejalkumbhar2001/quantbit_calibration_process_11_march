@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-02-26 10:34:40.526786",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "column_break_qjsbf",
+  "column_break_naquh",
+  "company",
+  "section_break_8ltwh",
+  "equipment_id",
+  "column_break_9z8fl",
+  "equipment_name",
+  "column_break_gv9ky",
+  "testing_type",
+  "section_break_qjvo8",
+  "task_type",
+  "task_list_description_section",
+  "task_list"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_qjsbf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_naquh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8ltwh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "equipment_id",
+   "fieldtype": "Link",
+   "label": "Equipment Id",
+   "options": "Equipment Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_9z8fl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "equipment_id.equipment_name",
+   "fieldname": "equipment_name",
+   "fieldtype": "Data",
+   "label": "Equipment Name"
+  },
+  {
+   "fieldname": "task_list_description_section",
+   "fieldtype": "Section Break",
+   "label": "Task List Description"
+  },
+  {
+   "fieldname": "task_list",
+   "fieldtype": "Table",
+   "label": "Task List",
+   "options": "Task Description Details"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "EQTASK-",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_gv9ky",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "testing_type",
+   "fieldtype": "Select",
+   "label": "Testing Type",
+   "options": "Quantitative\nQualitative"
+  },
+  {
+   "fieldname": "section_break_qjvo8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "task_type",
+   "fieldtype": "Link",
+   "label": "Equipment Test Type",
+   "options": "Equipment Task Type"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-26 12:03:19.291212",
+ "modified_by": "Administrator",
+ "module": "Quantbit Calibration Process",
+ "name": "Equipment Task List",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "equipment_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

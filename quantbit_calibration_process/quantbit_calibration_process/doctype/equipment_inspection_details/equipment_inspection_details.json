@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-26 13:43:59.937169",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task_name",
+  "column_break_bjzll",
+  "task_description",
+  "section_break_4e3gp",
+  "minimum",
+  "minresult",
+  "column_break_fzsqn",
+  "maximum",
+  "maxresult",
+  "section_break_zns4o",
+  "work_done"
+ ],
+ "fields": [
+  {
+   "fieldname": "task_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Task Name"
+  },
+  {
+   "fieldname": "task_description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Task Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "minimum",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Minimum",
+   "precision": "2"
+  },
+  {
+   "fieldname": "minresult",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Result",
+   "precision": "2"
+  },
+  {
+   "fieldname": "maximum",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Maximum",
+   "precision": "2"
+  },
+  {
+   "fieldname": "maxresult",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Result",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_bjzll",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_4e3gp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_fzsqn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zns4o",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "work_done",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Work Done",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-29 14:55:57.431213",
+ "modified_by": "Administrator",
+ "module": "Quantbit Calibration Process",
+ "name": "Equipment Inspection Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

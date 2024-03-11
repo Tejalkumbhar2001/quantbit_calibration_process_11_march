@@ -1,0 +1,69 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:calibration_type_name",
+ "creation": "2024-02-26 10:48:17.316026",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "column_break_zvznu",
+  "column_break_5tf4v",
+  "company",
+  "section_break_lzfuz",
+  "calibration_type_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_zvznu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5tf4v",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_lzfuz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "calibration_type_name",
+   "fieldtype": "Data",
+   "label": "Calibration Type Name",
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-26 10:49:00.481564",
+ "modified_by": "Administrator",
+ "module": "Quantbit Calibration Process",
+ "name": "Equipment Task Type",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "creation": "2024-03-08 14:23:54.319702",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "parameter",
+  "parameter_details",
+  "column_break_q9ufp",
+  "minimum",
+  "maximum",
+  "standard_value",
+  "section_break_2",
+  "description"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "parameter",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Parameter "
+  },
+  {
+   "fieldname": "parameter_details",
+   "fieldtype": "Small Text",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Parameter Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_q9ufp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "minimum",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Minimum Value",
+   "precision": "2"
+  },
+  {
+   "columns": 2,
+   "fieldname": "maximum",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Maximum Value",
+   "precision": "2"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "standard_value",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Standard Value",
+   "precision": "2"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2024-03-08 16:48:14.945331",
+ "modified_by": "Administrator",
+ "module": "Quantbit Calibration Process",
+ "name": "Calibration Task List",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-26 10:53:45.758436",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task_type",
+  "task_description",
+  "minimum",
+  "maximum"
+ ],
+ "fields": [
+  {
+   "fieldname": "task_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Task Type",
+   "options": "Task Details"
+  },
+  {
+   "fieldname": "task_description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Task Description"
+  },
+  {
+   "fieldname": "minimum",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Minimum"
+  },
+  {
+   "fieldname": "maximum",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Maximum"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-26 12:01:38.377128",
+ "modified_by": "Administrator",
+ "module": "Quantbit Calibration Process",
+ "name": "Task Description Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

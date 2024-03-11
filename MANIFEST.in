@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include quantbit_calibration_process *.css
+recursive-include quantbit_calibration_process *.csv
+recursive-include quantbit_calibration_process *.html
+recursive-include quantbit_calibration_process *.ico
+recursive-include quantbit_calibration_process *.js
+recursive-include quantbit_calibration_process *.json
+recursive-include quantbit_calibration_process *.md
+recursive-include quantbit_calibration_process *.png
+recursive-include quantbit_calibration_process *.py
+recursive-include quantbit_calibration_process *.svg
+recursive-include quantbit_calibration_process *.txt
+recursive-exclude quantbit_calibration_process *.pyc

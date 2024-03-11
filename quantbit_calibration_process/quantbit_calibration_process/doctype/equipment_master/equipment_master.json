@@ -1,0 +1,166 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:equipment_name",
+ "creation": "2024-02-24 17:20:41.141400",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "is_calibration",
+  "column_break_shi05",
+  "company",
+  "section_break_2zmai",
+  "equipment_brand",
+  "department",
+  "column_break_l8jgc",
+  "equipment_name",
+  "valid_from",
+  "column_break_qshtv",
+  "equipment_category",
+  "valid_to",
+  "column_break_3fczm",
+  "plant",
+  "location",
+  "section_break_viilv",
+  "calibration_task_list",
+  "section_break_a7ynh",
+  "discription"
+ ],
+ "fields": [
+  {
+   "fieldname": "equipment_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Equipment Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_2zmai",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "plant",
+   "fieldtype": "Data",
+   "label": "Plant Name"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "valid_from",
+   "fieldtype": "Date",
+   "label": "Valid From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "valid_to",
+   "fieldtype": "Date",
+   "label": "Valid To",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_qshtv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_3fczm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "equipment_category",
+   "fieldtype": "Link",
+   "label": "Equipment Category",
+   "options": "Equipment Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "equipment_brand",
+   "fieldtype": "Data",
+   "label": "Equipment Brand"
+  },
+  {
+   "fieldname": "column_break_l8jgc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "section_break_a7ynh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "discription",
+   "fieldtype": "Text Editor",
+   "label": "Discription"
+  },
+  {
+   "fieldname": "section_break_viilv",
+   "fieldtype": "Section Break",
+   "label": "Calibration Parameter"
+  },
+  {
+   "depends_on": "eval:doc.is_calibration==1",
+   "fieldname": "calibration_task_list",
+   "fieldtype": "Table",
+   "label": "Calibration Task List",
+   "options": "Calibration Task List"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_calibration",
+   "fieldtype": "Check",
+   "label": "Is Calibration"
+  },
+  {
+   "fieldname": "column_break_shi05",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-08 16:12:09.589847",
+ "modified_by": "Administrator",
+ "module": "Quantbit Calibration Process",
+ "name": "Equipment Master",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "equipment_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

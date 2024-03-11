@@ -1,0 +1,225 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-03-07 13:00:52.546313",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "column_break_r4dgo",
+  "date",
+  "column_break_qdw5r",
+  "company",
+  "section_break_sntxo",
+  "request_type",
+  "maintanance_type",
+  "column_break_djwg6",
+  "department_name",
+  "plant",
+  "column_break_y7ilt",
+  "requested_by",
+  "section_break_j6u8f",
+  "equipment_id",
+  "valid_from",
+  "column_break_p0dpi",
+  "equipment_name",
+  "valid_to",
+  "column_break_ixxns",
+  "equipment_category",
+  "location",
+  "section_break_wmfvr",
+  "notification_calibration_task_list",
+  "discription",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "MRN-"
+  },
+  {
+   "fieldname": "column_break_r4dgo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qdw5r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_sntxo",
+   "fieldtype": "Section Break",
+   "label": "Order Request Details"
+  },
+  {
+   "fieldname": "department_name",
+   "fieldtype": "Link",
+   "label": "Department Name",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_djwg6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maintanance_type",
+   "fieldtype": "Select",
+   "label": "Maintenance Type",
+   "options": "\nRegular\nBreakdown\nPreventive"
+  },
+  {
+   "fieldname": "section_break_j6u8f",
+   "fieldtype": "Section Break",
+   "label": "Equipment Details"
+  },
+  {
+   "fieldname": "equipment_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Equipment ID",
+   "options": "Equipment Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_p0dpi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "equipment_id.equipment_name",
+   "fieldname": "equipment_name",
+   "fieldtype": "Data",
+   "label": "Equipment Name"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Maintanance Request-Notification",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_wmfvr",
+   "fieldtype": "Section Break",
+   "label": "Calibration Task List"
+  },
+  {
+   "bold": 1,
+   "fieldname": "discription",
+   "fieldtype": "Text Editor",
+   "label": "Discription",
+   "max_height": "90px",
+   "reqd": 1,
+   "width": "40px"
+  },
+  {
+   "fieldname": "column_break_ixxns",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "equipment_id.location",
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Location"
+  },
+  {
+   "fetch_from": "equipment_id.equipment_category",
+   "fieldname": "equipment_category",
+   "fieldtype": "Link",
+   "label": "Equipment Category",
+   "options": "Equipment Category"
+  },
+  {
+   "fieldname": "plant",
+   "fieldtype": "Data",
+   "label": "Plant"
+  },
+  {
+   "fetch_from": "equipment_id.valid_from",
+   "fieldname": "valid_from",
+   "fieldtype": "Date",
+   "label": "Valid From"
+  },
+  {
+   "fetch_from": "equipment_id.valid_to",
+   "fieldname": "valid_to",
+   "fieldtype": "Date",
+   "label": "Valid To"
+  },
+  {
+   "fieldname": "requested_by",
+   "fieldtype": "Link",
+   "label": "Requested by",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_y7ilt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "request_type",
+   "fieldtype": "Select",
+   "label": "Request Type",
+   "options": "\nMaintanance\nCalibration"
+  },
+  {
+   "depends_on": "eval:doc.request_type==\"Calibration\"",
+   "fieldname": "notification_calibration_task_list",
+   "fieldtype": "Table",
+   "label": "Calibration Task List",
+   "options": "Notification Calibration Task List"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Equipment Maintanance Order",
+   "link_fieldname": "maintanance_notification"
+  }
+ ],
+ "modified": "2024-03-10 23:23:47.958465",
+ "modified_by": "Administrator",
+ "module": "Quantbit Calibration Process",
+ "name": "Maintanance Request-Notification",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
